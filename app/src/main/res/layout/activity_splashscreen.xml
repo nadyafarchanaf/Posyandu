@@ -21,6 +21,31 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:padding="20dp"></LinearLayout>
+        android:padding="20dp">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:text="back"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:text="next"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
 
 </RelativeLayout>
