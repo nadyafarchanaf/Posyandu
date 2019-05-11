@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <color name="colorPrimary">#d60064</color>
-        <color name="colorPrimaryDark">#b30d4d</color>
-        <color name="colorAccent">#e1e1e1</color>
+        <color name="colorPrimary">#ab6c82</color>
+        <color name="colorPrimaryDark">#475c7a</color>
+        <color name="colorAccent">#d8737f</color>
         <color name="colorText">#ffffff</color>
-        <color name="colorPrimaryDark2">#106991</color>
-        <color name="colorPrimary2">#1984b4</color>
+        <color name="colorPrimaryDark2">#685d79</color>
+        <color name="colorPrimary2">#fcbb6d</color>
         <color name="colorWhite">#ffffff</color>
         <color name="colorTransparentWhite">#cccccc</color>
 
@@ -19,34 +19,29 @@
 
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>
-    <color name="bg_screen2">#20d2bb</color>
-    <color name="bg_screen3">#3395ff</color>
-    <color name="bg_screen4">#c873f4</color>
+    <color name="bg_screen2">#693b69</color>
+    <color name="bg_screen3">#ef5350</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#d1395c</color>
-    <color name="dot_dark_screen2">#14a895</color>
-    <color name="dot_dark_screen3">#2278d4</color>
-    <color name="dot_dark_screen4">#a854d4</color>
+    <color name="dot_dark_screen2">#511f52</color>
+    <color name="dot_dark_screen3">#f44336</color>
 
     <!-- dots active colors -->
     <color name="dot_light_screen1">#f98da5</color>
-    <color name="dot_light_screen2">#8cf9eb</color>
-    <color name="dot_light_screen3">#93c6fd</color>
-    <color name="dot_light_screen4">#e4b5fc</color>
+    <color name="dot_light_screen2">#a987a8</color>
+    <color name="dot_light_screen3">#ef9a9a</color>
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>
         <item>@color/dot_light_screen2</item>
         <item>@color/dot_light_screen3</item>
-        <item>@color/dot_light_screen4</item>
     </array>
 
     <array name="array_dot_inactive">
         <item>@color/dot_dark_screen1</item>
         <item>@color/dot_dark_screen2</item>
         <item>@color/dot_dark_screen3</item>
-        <item>@color/dot_dark_screen4</item>
     </array>
 
 

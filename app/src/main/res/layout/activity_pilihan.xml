@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:background="@color/colorPrimaryDark"
     tools:context=".Pilihan">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:text="TextView"
+        android:textColor="@color/colorText"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Masuk sebagai" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/roundcorne"
+        android:contentDescription="Tenaga Medis"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/pil2" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/roundcorne"
+        android:contentDescription="Ibu"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/pil" />
+</RelativeLayout>

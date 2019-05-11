@@ -5,11 +5,10 @@
     android:id="@+id/backgroun_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorPrimaryDark"
     android:paddingLeft="30dp"
     android:paddingTop="80dp"
     android:paddingRight="30dp"
-    tools:background="@color/colorWhite"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -33,7 +32,7 @@
             android:hint="  Email"
             android:inputType="textEmailAddress"
             android:textColor="@color/colorText"
-            tools:background="@color/colorAccent" />
+            tools:background="@color/colorTransparentWhite" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -52,7 +51,7 @@
             android:hint="  Password"
             android:inputType="textPassword"
             android:textColor="@color/colorText"
-            tools:background="@color/colorAccent" />
+            tools:background="@color/colorTransparentWhite" />
     </android.support.design.widget.TextInputLayout>
 
     <ProgressBar
@@ -69,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/layoutpassword"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/colorPrimary2"
+        android:background="@color/bg_screen1"
         android:text="LOGIN"
         android:textColor="@color/colorText" />
 
