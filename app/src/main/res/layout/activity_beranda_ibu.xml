@@ -15,14 +15,22 @@
         android:layout_marginTop="0dp"
         android:adjustViewBounds="true"
         android:background="@drawable/bgr"
-        android:layout_constrainEnd_toEndOf="parent"
         />
-
-    <android.support.design.widget.BottomNavigationView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/fl_container"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bn_beranda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        app:itemTextColor="@drawable/state_bnve"
+        app:itemIconTint="@drawable/state_bnve"
+        app:menu="@menu/bottomnavigation_menu" />
 </RelativeLayout>
 
 

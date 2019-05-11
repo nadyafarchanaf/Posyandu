@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_menu"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home_black_24dp"/>
+    <item
+        android:icon="@drawable/ic_child_care_black_24dp"
+        android:title="@string/posyandu"
+        android:id="@+id/posyandu_menu"/>
+    <item
+        android:id="@+id/profil_menu"
+        android:title="@string/profil"
+        android:icon="@drawable/ic_account_circle_black_24dp"/>
+</menu>
