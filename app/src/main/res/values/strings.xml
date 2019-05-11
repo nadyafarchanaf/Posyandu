@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Posyandu</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Mom!</string>
+    <string name="slide_1_desc">Cara termudah untuk mengetahui hasil pemeriksaan kehamilan dengan tenaga medis di Posyandu</string>
+
+    <string name="slide_2_title">Ibu dan Anak</string>
+    <string name="slide_2_desc">Mengetahui perkembangan kesehatan ibu dan bayi</string>
+
+    <string name="slide_3_title">Ibu dan Tenaga Medis</string>
+    <string name="slide_3_desc">Lebih dekat dengan tenaga medis dan info Posyandu</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
 </resources>

@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgroun_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimary"
     android:paddingLeft="30dp"
-    android:paddingRight="30dp"
     android:paddingTop="80dp"
+    android:paddingRight="30dp"
+    tools:background="@color/colorWhite"
     tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        app:srcCompat="@drawable/logoxxxhdpi" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/layoutemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo">
+
         <EditText
-            android:inputType="textEmailAddress"
-            android:hint="Email"
-            android:textColor="@color/colorText"
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:hint="  Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorText"
+            tools:background="@color/colorAccent" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -35,42 +41,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/layoutemail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
         app:passwordToggleEnabled="true">
+
         <EditText
-            android:inputType="textPassword"
-            android:hint="Password"
-            android:textColor="@color/colorText"
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:hint="  Password"
+            android:inputType="textPassword"
+            android:textColor="@color/colorText"
+            tools:background="@color/colorAccent" />
     </android.support.design.widget.TextInputLayout>
 
     <ProgressBar
         android:id="@+id/loading"
-        android:layout_marginTop="35dp"
-        android:layout_below="@id/layoutpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:layout_below="@id/layoutpassword"
+        android:layout_marginTop="35dp"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/layoutpassword"
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/colorPrimary2"
         android:text="LOGIN"
-        android:textColor="@color/colorText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textColor="@color/colorText" />
 
     <TextView
         android:id="@+id/link_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:textColor="@color/colorAccent"
         android:text="Register"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textColor="@color/colorAccent" />
 
 </RelativeLayout>
