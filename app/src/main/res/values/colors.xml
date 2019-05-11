@@ -7,7 +7,7 @@
         <color name="colorPrimaryDark2">#685d79</color>
         <color name="colorPrimary2">#fcbb6d</color>
         <color name="colorWhite">#ffffff</color>
-        <color name="colorTransparentWhite">#cccccc</color>
+        <color name="colorTransparentWhite">#f7f6f6</color>
 
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
