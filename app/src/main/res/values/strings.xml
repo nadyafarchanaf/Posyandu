@@ -16,7 +16,7 @@
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
 
-    <string name="home">Home</string>
+    <string name="home">Beranda</string>
     <string name="posyandu">Posyandu</string>
     <string name="profil">Profil</string>
 </resources>

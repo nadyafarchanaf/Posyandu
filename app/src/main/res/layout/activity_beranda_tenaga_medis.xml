@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorTransparentWhite"
-    tools:context=".BerandaIbu">
+    tools:context=".BerandaTenagaMedis">
 
     <View
         android:id="@+id/imageView"
@@ -16,25 +15,14 @@
         android:adjustViewBounds="true"
         android:background="@drawable/bgr"
         />
+
     <FrameLayout
+        android:id="@+id/fl_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fl_container"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <TextView
-            android:id="@+id/Beranda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="TextView"
-            android:textAllCaps="false"
-            android:textColor="@color/colorText"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            tools:text="@string/home" />
-    </FrameLayout>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bn_beranda"
@@ -45,8 +33,5 @@
         app:itemTextColor="@drawable/state_bnve"
         app:itemIconTint="@drawable/state_bnve"
         app:menu="@menu/bottomnavigation_menu" />
+
 </RelativeLayout>
-
-
-
-

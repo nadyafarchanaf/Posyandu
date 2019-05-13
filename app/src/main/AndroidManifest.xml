@@ -22,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BerandaIbu"></activity>
+        <activity android:name=".BerandaIbu" />
+        <activity android:name=".BerandaTenagaMedis"></activity>
     </application>
 
 </manifest>
