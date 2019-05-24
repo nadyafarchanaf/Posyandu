@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparentWhite"
+    tools:context=".BerandaIbu">
+
+    <View
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bgr" />
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/identitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:cardBackgroundColor="@android:color/transparent">
+
+            <TextView
+                android:id="@+id/usia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="35dp"
+                android:text="TextView"
+                android:textColor="@color/colorText"
+                android:textStyle="bold" />
+
+            <!--Ini buat foto profil anaknya, kalo lagi-laki src ppb kalo anaknya perempuan src ppg-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myPict"
+                android:layout_width="70dp"
+
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ppb" />
+
+            <TextView
+                android:id="@+id/nama_anak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="15dp"
+                android:text="TextView"
+                android:textColor="@color/colorText"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/pemeriksaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="10dp"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/form"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/berat_anak"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Berat anak">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/beratanak"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="   Berat anak"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorText"
+                        tools:background="@drawable/box" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/lingkar_kepala_anak"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Lingkar kepala anak">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/lingkarkepala"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="   Lingkar kepala anak"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorText"
+                        tools:background="@drawable/box" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tinggianak"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Tinggi anak">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/tinggii"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="   Tinggi anak"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorText"
+                        tools:background="@drawable/box" />
+                </android.support.design.widget.TextInputLayout>'
+
+                <EditText
+                    android:id="@+id/tanggalpemeriksaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:hint="   Tanggal Pemeriksaan"
+                    android:inputType="datetime|time"
+                    tools:background="@drawable/box" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="0dp"
+                        android:text="Imunisasi"
+                        android:textColor="@color/colorText"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/switc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="180dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginRight="0dp"
+                        android:checked="true"
+                        android:textColorLink="@color/colorPrimaryDark"
+                        android:textOff="Tidak"
+                        android:textOn="Iya"
+                        android:textSize="12sp"
+                        android:theme="@style/SwitcBar"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+                <!--Isinya imunisasi yang ada-->
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="10dp" />
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Simpan"
+                    android:textColor="@color/colorText"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/Beranda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/pemeriksaan"
+            android:textAllCaps="false"
+            android:textColor="@color/colorText"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bn_beranda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        app:itemTextColor="@drawable/state_bnve"
+        app:itemIconTint="@drawable/state_bnve"
+        app:menu="@menu/bottomnavigation_menu" />
+</RelativeLayout>
+
+
+
+

@@ -23,7 +23,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".BerandaIbu" />
-        <activity android:name=".BerandaTenagaMedis"></activity>
+        <activity android:name=".BerandaTenagaMedis" />
+        <activity android:name=".ProfilIbu" />
+        <activity android:name=".PemeriksaanMedis"></activity>
     </application>
 
 </manifest>

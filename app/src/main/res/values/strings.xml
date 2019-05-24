@@ -18,5 +18,7 @@
 
     <string name="home">Beranda</string>
     <string name="posyandu">Posyandu</string>
+    <string name="pemeriksaan">Pemeriksaan</string>
     <string name="profil">Profil</string>
+    <string name="form">Form Pemeriksaan</string>
 </resources>
