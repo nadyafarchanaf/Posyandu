@@ -1,6 +1,7 @@
 package com.example.nadya.posyandu;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +20,9 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.nadya.posyandu.Adapter.SessionManager;
 import com.example.nadya.posyandu.Model.Anak;
+import com.example.nadya.posyandu.Model.HasilPemeriksaan;
 import com.example.nadya.posyandu.Model.Ibu;
 import com.example.nadya.posyandu.Util.AppController;
 import com.example.nadya.posyandu.Util.ServerAPI;
@@ -27,6 +31,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -36,27 +42,48 @@ import java.util.Map;
 
 public class BerandaIbu extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
+    SessionManager sessionManager;
     RecyclerView mRecyclerview;
     RecyclerView.Adapter mAdapter;
     RecyclerView.LayoutManager mManager;
-    List<Ibu> mItems = new ArrayList<Ibu>();
     ProgressDialog pd;
-    TextView nama;
+    TextView nama,usia,bb_anak;
+    Button btn_logout;
+    Anak md = new Anak();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beranda_ibu);
 
+        btn_logout = findViewById(R.id.btn_logout);
+
+        sessionManager = new SessionManager(this);
+        sessionManager.checkLogin();
+
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sessionManager.logout();
+            }
+        });
+
+        HashMap<String, String> user = sessionManager.getUserDetail();
+        String mName = user.get(sessionManager.NAME);
+        String mEmail = user.get(sessionManager.EMAIL);
+
         //Menerima Data Ibu dari LOGIN
         Ibu dataDiterima = getIntent().getParcelableExtra("DATAIBU");
 
         pd = new ProgressDialog(BerandaIbu.this);
-        mItems = new ArrayList<Ibu>();
         nama = findViewById(R.id.nama_anak);
+        usia = findViewById(R.id.usia);
+        bb_anak = findViewById(R.id.bb_anak);
+
+        Context context = BerandaIbu.this;
 
         //Memuat Data Anak dari DB
-        loadJson(dataDiterima.getId());
+        loadJson(dataDiterima.getId(),md);
 
         loadFragment(new HomeFragment());
 
@@ -91,7 +118,7 @@ public class BerandaIbu extends AppCompatActivity implements BottomNavigationVie
     }
 
     //Mengambil Data Anak dari DB
-    private void loadJson(final int id) {
+    private void loadJson(final int id,final Anak md) {
         pd.setMessage("Mengambil Data");
         pd.setCancelable(false);
         pd.show();
@@ -102,7 +129,6 @@ public class BerandaIbu extends AppCompatActivity implements BottomNavigationVie
                     public void onResponse(String response) {
                         pd.dismiss();
                         Log.d("volley","response : " + response.toString());
-                        Log.d("tolol","respones :"+ mItems.isEmpty());
 
                         try {
                             JSONObject jsonObject = new JSONObject(response);
@@ -117,17 +143,19 @@ public class BerandaIbu extends AppCompatActivity implements BottomNavigationVie
 
                                     int intId = object.getInt("id");
                                     String strNama = object.getString("nama").trim();
+                                    String dateStr = object.getString("tanggal_lahir").trim();
+                                    Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateStr);
 
-
-                                    Anak md = new Anak();
                                     md.setId(intId);
                                     md.setNama(strNama);
+                                    md.setTanggal_lahir(date);
 
                                     nama.setText(md.getNama());
+                                    usia.setText(dateStr);
                                 }
                             }
 
-                        } catch (JSONException e) {
+                        } catch (JSONException | ParseException e) {
                             e.printStackTrace();
                             pd.dismiss();
                             Toast.makeText(BerandaIbu.this, "Error Reading Detail "+e.toString(), Toast.LENGTH_SHORT).show();

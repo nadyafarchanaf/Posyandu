@@ -19,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.nadya.posyandu.Adapter.SessionManager;
 import com.example.nadya.posyandu.Model.Ibu;
 import com.example.nadya.posyandu.Util.ServerAPI;
 
@@ -35,11 +36,14 @@ public class LoginActivity extends AppCompatActivity {
     private Button btn_login;
     private TextView link_regist;
     private ProgressBar loading;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        sessionManager = new SessionManager(this);
 
         loading = findViewById(R.id.loading);
         email = findViewById(R.id.email);
@@ -93,6 +97,8 @@ public class LoginActivity extends AppCompatActivity {
                                     String name = object.getString("name").trim();
                                     String email = object.getString("email").trim();
                                     int id = object.getInt("id");
+
+                                    sessionManager.createSession(name,email,Integer.toString(id));
 
                                     Ibu dataIbu = new Ibu();
                                     dataIbu.setId(id);
