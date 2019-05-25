@@ -29,6 +29,7 @@
         <activity android:name=".PemeriksaanMedis"></activity>
         <activity android:name=".BerandaTenagaMedis"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".Kegiatanposyandu"></activity>
     </application>
 
 </manifest>
