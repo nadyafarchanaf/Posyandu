@@ -25,7 +25,8 @@
         <activity android:name=".BerandaIbu" />
         <activity android:name=".BerandaTenagaMedis" />
         <activity android:name=".ProfilIbu" />
-        <activity android:name=".PemeriksaanMedis"></activity>
+        <activity android:name=".PemeriksaanMedis" />
+        <activity android:name=".Kegiatanposyandu"></activity>
     </application>
 
 </manifest>
