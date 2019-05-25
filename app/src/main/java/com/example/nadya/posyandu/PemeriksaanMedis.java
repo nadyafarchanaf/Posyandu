@@ -8,6 +8,6 @@ public class PemeriksaanMedis extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_posyandu);
+        setContentView(R.layout.activity_pemeriksaan_medis);
     }
 }

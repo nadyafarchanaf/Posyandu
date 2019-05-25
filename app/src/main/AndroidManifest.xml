@@ -3,8 +3,10 @@
     package="com.example.nadya.posyandu">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
+        android:name=".Util.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,9 +25,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".BerandaIbu" />
-        <activity android:name=".BerandaTenagaMedis" />
         <activity android:name=".ProfilIbu" />
         <activity android:name=".PemeriksaanMedis"></activity>
+        <activity android:name=".BerandaTenagaMedis"></activity>
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

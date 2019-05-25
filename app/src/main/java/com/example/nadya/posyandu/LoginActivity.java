@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.JetPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.nadya.posyandu.Model.Ibu;
 import com.example.nadya.posyandu.Util.ServerAPI;
 
 import org.json.JSONArray;
@@ -90,11 +92,14 @@ public class LoginActivity extends AppCompatActivity {
 
                                     String name = object.getString("name").trim();
                                     String email = object.getString("email").trim();
+                                    int id = object.getInt("id");
 
-                                    Toast.makeText(LoginActivity.this,
-                                            "Succes Login. \nYour Name:"+name ,
-                                            Toast.LENGTH_SHORT)
-                                            .show();
+                                    Ibu dataIbu = new Ibu();
+                                    dataIbu.setId(id);
+
+                                    Intent home = new Intent(LoginActivity.this, BerandaIbu.class);
+                                    home.putExtra("DATAIBU",dataIbu);
+                                    startActivity(home);
 
                                     loading.setVisibility(View.GONE);
 
